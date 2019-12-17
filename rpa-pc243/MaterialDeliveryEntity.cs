@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 
 namespace rpa_functions.rpa_pc243
+   
 {
     public static class HtmlTemplate
     {
@@ -44,6 +45,7 @@ namespace rpa_functions.rpa_pc243
                                     <button class=submit id=button_{ent.id} type=button>Submit</button>
                                     </td>
                                     </tr>";
+               
 
                 htmlTable = htmlTable + tableLine;
             }
@@ -57,14 +59,16 @@ namespace rpa_functions.rpa_pc243
 
             string retVal = $@"
                             <html>
-                            <title>Equinor Material Delivery feedback</title>
+                            <head>
+                            <title>Equinor Material Delivery feedback</title> 
                             <script src=https://code.jquery.com/jquery-3.4.1.js integrity=sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU= crossorigin=anonymous></script>
+                            <link rel=""stylesheet"" href=""C:\APPL\RPA_Functions\css\main.css"" type=""text/css"">
                             </head>
                             <body>
                             <h3>{vendor_name}</h3>
                             <input type=hidden id=webid value={webguid}>
                             <br>
-                            <table border=1>
+                            <table>
                             <tr>
                             <th>Vendor No</th>
                             <th>Vendor Name</th>
